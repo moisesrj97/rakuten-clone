@@ -3,7 +3,7 @@ const swiper = new Swiper('.swiper', {
   spaceBetween: 5,
   loop: true,
   slidesPerView: 8,
-  slidesPerGroup: 8,
+  slidesPerGroup: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -42,14 +42,18 @@ const swiper2 = new Swiper('.swiper--genres', {
   spaceBetween: 5,
   loop: true,
   slidesPerView: 8,
-  slidesPerGroup: 8,
+  slidesPerGroup: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
   breakpoints: {
-    320: {
+    1: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+    700: {
       slidesPerView: 4,
       spaceBetween: 5,
     },

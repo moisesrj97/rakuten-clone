@@ -185,11 +185,14 @@ body {
   width: 98vw;
   height: 300px;
   margin-top: 5px;
+  &-wrapper {
+    height: 100%;
+  }
   &-slide {
-    width: 600px;
+    height: 100%;
     @include basics.flexCenter(column);
     & img {
-      border-radius: 3px;
+      border-radius: 5px;
       &:hover {
         outline: 4px solid basics.$highlight-color;
         outline-offset: -4px;
@@ -214,7 +217,6 @@ body {
       width: 50%;
       &:hover {
         outline: none;
-        outline-offset: -4px;
       }
     }
   }
@@ -305,8 +307,6 @@ body {
   .header,
   carousel-control-prev,
   carousel-control-next,
-  .swiper-button-next,
-  .swiper-button-prev,
   .footer__main {
     display: none;
   }
@@ -379,23 +379,25 @@ body {
   .featured {
     display: none;
   }
+
   .swiper {
-    height: 195px;
+    & img {
+      width: 95%;
+    }
     &--genres {
       height: 150px;
-      margin-bottom: 20px;
       & img {
-        width: 80%;
+        width: 50%;
       }
     }
-    &-slide__title {
-      font-weight: normal;
-      font-size: 1rem;
-    }
   }
+
   .swipper--featured {
     display: block;
     height: 160px;
+    & img {
+      width: 95%;
+    }
   }
   .movie-carousel {
     &__title {
@@ -413,8 +415,6 @@ body {
     @include basics.flexCenter(row);
     z-index: 5;
     border-top: 1px solid rgb(51, 51, 51);
-    /*     height: 50px;
- */
     width: 100%;
     padding-top: 10px;
     &__link-container {
