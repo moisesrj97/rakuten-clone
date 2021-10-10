@@ -442,6 +442,9 @@ carousel-control-next,
     display: none;
   }
 
+  .swiper {
+    height: 230px;
+  }
   .swiper img {
     width: 95%;
   }
