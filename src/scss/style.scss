@@ -1,0 +1,445 @@
+@use 'basics';
+
+body {
+  background-color: basics.$body-background-color;
+}
+
+.header {
+  @include basics.flexCenter(row);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  z-index: 2;
+  &-mobile {
+    display: none;
+  }
+
+  &__logo {
+    height: 30px;
+  }
+  &__dropdowns {
+    @include basics.flexCenter(row);
+    &-link {
+      font-weight: bold;
+      margin: 0 10px;
+      &:hover {
+        color: basics.$highlight-color;
+        cursor: pointer;
+      }
+      &:hover + .header__dropdowns-link-droppable-cinema,
+      &:hover + .header__dropdowns-link-droppable-subscription {
+        display: block;
+      }
+    }
+    &-link-droppable-cinema:hover,
+    &-link-droppable-subscription:hover {
+      display: block;
+    }
+    &-link-droppable-cinema {
+      display: none;
+      position: absolute;
+      padding-top: 20px;
+      top: 40px;
+      left: 10%;
+      width: 200px;
+      background-color: black;
+      z-index: 3;
+    }
+    &-link-droppable-subscription {
+      display: none;
+      position: absolute;
+      padding-top: 20px;
+      top: 40px;
+      left: 26%;
+      width: 200px;
+      background-color: black;
+      z-index: 3;
+    }
+    &-link-droppable-list {
+      list-style-type: none;
+      color: white;
+    }
+    &-link-droppable-element {
+      font-size: 0.9rem;
+      &:hover {
+        cursor: pointer;
+        color: basics.$highlight-color;
+      }
+    }
+  }
+  &__form {
+    @include basics.flexCenter(row);
+  }
+  &__search {
+    @include basics.flexCenter(row);
+    margin-right: 30px;
+    &-input {
+      height: 40px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      background-color: basics.$input-gray-color;
+      padding-left: 40px;
+      &::placeholder {
+        font-size: 1.1rem;
+      }
+    }
+    &-icon {
+      margin-right: -30px;
+      color: basics.$light-text-footer;
+      font-size: 1.2rem;
+      z-index: 3;
+    }
+  }
+  &__help {
+    @include basics.flexCenter(row);
+    &-text {
+      margin: 0;
+      color: basics.$light-text-footer;
+      font-weight: bold;
+      &:hover {
+        color: basics.$highlight-color;
+        cursor: pointer;
+      }
+    }
+  }
+  &__auth {
+    @include basics.flexCenter(row);
+    height: 100%;
+    margin-right: 30px;
+    &-login {
+      font-weight: bold;
+      margin: 0;
+      &:hover {
+        cursor: pointer;
+        color: basics.$highlight-color;
+      }
+    }
+    &-register {
+      font-weight: 600;
+      padding: 7px 10px;
+      border-radius: 3px;
+      margin: 0;
+      margin-left: 20px;
+      color: black;
+      background-color: basics.$highlight-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main {
+  background-color: basics.$main-background-color;
+  flex-grow: 1;
+  margin: 0 300px;
+}
+
+.carousel {
+  margin-top: -40px;
+  cursor: pointer;
+}
+
+.featured {
+  @include basics.flexCenter(row);
+  justify-content: space-around;
+  width: 100%;
+  &__image {
+    width: 19%;
+    border-radius: 3px;
+    &:hover {
+      outline: 4px solid basics.$highlight-color;
+      outline-offset: -4px;
+    }
+  }
+}
+.movie-carousel {
+  width: 100%;
+  &__text {
+    @include basics.flexCenter(row);
+    justify-content: space-between;
+    align-items: flex-end;
+    color: white;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  &__see-more {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    cursor: pointer;
+  }
+}
+
+.swiper {
+  width: 98vw;
+  height: 300px;
+  margin-top: 5px;
+  &-slide {
+    width: 600px;
+    @include basics.flexCenter(column);
+    & img {
+      width: 95%;
+      border-radius: 3px;
+      &:hover {
+        outline: 4px solid basics.$highlight-color;
+        outline-offset: -4px;
+        cursor: pointer;
+      }
+    }
+    &__title {
+      color: white;
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+  &-button-prev,
+  &-button-next {
+    color: white;
+    font-weight: 800;
+  }
+  &--genres {
+    height: 200px;
+    & img {
+      width: 50%;
+    }
+  }
+}
+.swipper--featured {
+  display: none;
+}
+
+.footer {
+  &__main {
+    height: 400px;
+    width: 100%;
+    background-color: basics.$footer-background-color;
+    color: white;
+    @include basics.flexCenter(column);
+  }
+  &__links {
+    @include basics.flexCenter(row);
+    padding-bottom: 10px;
+  }
+  &__title {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    padding: 0 20%;
+    text-align: center;
+    color: basics.$lighter-text-footer;
+  }
+  &__link {
+    &-container {
+      @include basics.flexCenter(column);
+    }
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    &-text {
+      text-align: center;
+      padding: 0 15%;
+      font-size: 0.9rem;
+      color: basics.$lighter-text-footer;
+    }
+  }
+  &__link-image {
+    height: 80px;
+    margin-bottom: 20px;
+  }
+  &__secondary {
+    @include basics.flexCenter(row);
+    justify-content: space-between;
+    padding: 40px 40px 10px 40px;
+    &-logo {
+      width: 120px;
+    }
+    &-pages {
+      @include basics.flexCenter(row);
+      justify-content: flex-start;
+      list-style-type: none;
+      font-size: 0.9rem;
+      color: basics.$light-text-footer;
+      flex-grow: 1;
+      padding-left: 20px;
+      margin: 0;
+      &-link {
+        margin: 7px;
+        color: rgb(192, 192, 192);
+        &:hover {
+          cursor: pointer;
+          color: white;
+        }
+      }
+    }
+    &-adress {
+      color: basics.$dark-text-footer;
+      font-size: 0.8rem;
+      padding-left: 40px;
+      padding-bottom: 30px;
+    }
+  }
+}
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .header,
+  carousel-control-prev,
+  carousel-control-next,
+  .swiper-button-next,
+  .swiper-button-prev,
+  .footer__main {
+    display: none;
+  }
+  .header-mobile {
+    @include basics.flexCenter(row);
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    &__logo {
+      width: 120px;
+    }
+    &__search {
+      color: white;
+    }
+    z-index: 5;
+  }
+  .footer {
+    flex-wrap: wrap;
+    height: auto;
+    &__subtitle {
+      padding: 0;
+      margin: 0;
+    }
+    &__main {
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: auto;
+    }
+    &__links {
+      flex-wrap: wrap;
+    }
+    &__secondary {
+      flex-direction: column;
+      padding-top: 50px;
+      &-logo {
+        margin-bottom: 20px;
+      }
+      &-pages {
+        flex-direction: column;
+        &-link {
+          margin: 1px;
+        }
+      }
+      &-adress {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .main {
+    margin: 0;
+    margin-top: -70px;
+    background-color: basics.$main-background-color;
+  }
+  .carousel {
+    height: 200px;
+    &-inner {
+      height: 100%;
+    }
+    &-item {
+      height: 100%;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .featured {
+    display: none;
+  }
+  .swiper {
+    height: 195px;
+    &--genres {
+      height: 150px;
+      margin-bottom: 20px;
+      & img {
+        width: 80%;
+      }
+    }
+    &-slide__title {
+      font-weight: normal;
+      font-size: 1rem;
+    }
+  }
+  .swipper--featured {
+    display: block;
+    height: 160px;
+  }
+  .movie-carousel {
+    &__title {
+      font-size: 1rem;
+    }
+    &__see-more {
+      display: none;
+    }
+  }
+  .mobile-nav {
+    display: block;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    @include basics.flexCenter(row);
+    z-index: 5;
+    border-top: 1px solid rgb(51, 51, 51);
+    /*     height: 50px;
+ */
+    width: 100%;
+    padding-top: 10px;
+    &__link-container {
+      @include basics.flexCenter(row);
+      width: 100%;
+      height: 100%;
+      padding: 0 10px;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    &__link {
+      @include basics.flexCenter(column);
+      height: 100%;
+      height: 50px;
+      justify-content: flex-end;
+      &-text {
+        font-size: 0.6rem;
+        height: 20%;
+        margin: 5px;
+        color: basics.$lighter-text-footer;
+        margin-top: 10px;
+      }
+      &-img {
+        height: 40%;
+        &--eye {
+          height: 30%;
+        }
+      }
+    }
+  }
+}

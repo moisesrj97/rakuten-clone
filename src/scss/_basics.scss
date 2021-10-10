@@ -1,0 +1,34 @@
+$highlight-color: #f0d500;
+$input-gray-color: #333333;
+$blue-highlight-color: #2bbda9;
+$red-highlight-color: #e54552;
+$body-background-color: #101010;
+$main-background-color: #171717;
+$footer-background-color: #212121;
+$light-text-footer: #999999;
+$lighter-text-footer: #ccc;
+$dark-text-footer: #737373;
+$dark-text-footer: #696869;
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  @include flexCenter(column);
+  font-family: NotoSans-Regular, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Moisés Rodríguez" />
+    <meta name="description" content="A rakuten clone" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Rakuten Clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="bootstrap-fixes.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="hidden">Rakuten</h1>
+      <img src="./images/others/logo.png" alt="logo" class="header__logo" />
+      <section class="header__dropdowns">
+        <p class="header__dropdowns-link">CINEMA ▼</p>
+        <div class="header__dropdowns-link-droppable-cinema">
+          <ul class="header__dropdowns-link-droppable-list">
+            <li class="header__dropdowns-link-droppable-element">FAMILY</li>
+            <li class="header__dropdowns-link-droppable-element">POPULARES</li>
+            <li class="header__dropdowns-link-droppable-element">TOP</li>
+            <li class="header__dropdowns-link-droppable-element">GÉNEROS</li>
+          </ul>
+        </div>
+        <p class="header__dropdowns-link">GRATIS</p>
+        <p class="header__dropdowns-link">SUSCRIPCIONES ▼</p>
+        <div class="header__dropdowns-link-droppable-subscription">
+          <ul class="header__dropdowns-link-droppable-list">
+            <li class="header__dropdowns-link-droppable-element">STARZ PLAY</li>
+            <li class="header__dropdowns-link-droppable-element">
+              RTVE SUSCRIPCIÓN
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="header__form">
+        <form action="#" class="header__search">
+          <i class="fas fa-search header__search-icon"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="header__search-input"
+            placeholder="Buscar"
+          />
+        </form>
+      </section>
+      <section class="header__help">
+        <p class="header__help-text">AYUDA Y DISPOSITIVOS</p>
+      </section>
+      <section class="header__auth">
+        <p class="header__auth-login">ENTRAR</p>
+        <p class="header__auth-register">REGISTRARSE</p>
+      </section>
+    </header>
+    <header class="header-mobile">
+      <img
+        src="./images/others/logo.png"
+        alt="logo"
+        class="header-mobile__logo"
+      />
+      <i class="fa fa-search header-mobile__search" aria-hidden="true"></i>
+    </header>
+    <main class="main">
+      <section class="carousel carousel-fade">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images/films-banner/a-todo-tren-1631713261-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/el-escuadron-suicida-1632130162-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/el-otro-guardaespaldas-2-1633683925-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/peter-rabbit-2-1632827632-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli4"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/promo-1-walk-of-fame-slider-1633341368-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli5"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/rtv-suscripcion-generic-slider-vis-reg-1633679222-width1920-quality80.png"
+                class="d-block w-100"
+                alt="peli6"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/seve-avod-slider-1632410810-width1920-quality80.png"
+                class="d-block w-100"
+                alt="peli7"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images/films-banner/starzplay-generic-vis-reg-1633590620-width1920-quality80.jpeg"
+                class="d-block w-100"
+                alt="peli8"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="featured">
+        <img
+          src="./images/films-horizontal/cenicienta-y-cuatro-caballeros-1623827347-width308-quality80.jpeg"
+          alt="peli1"
+          class="featured__image"
+        />
+        <img
+          src="./images/films-horizontal/el-armario-de-1614177682-width308-quality80.jpeg"
+          alt="peli2"
+          class="featured__image"
+        />
+        <img
+          src="./images/films-horizontal/royals-1620307742-width308-quality80.jpeg"
+          alt="peli3"
+          class="featured__image"
+        />
+        <img
+          src="./images/films-horizontal/molang-1611309421-width308-quality80.jpeg"
+          alt="peli4"
+          class="featured__image"
+        />
+        <img
+          src="./images/films-horizontal/te-recuerdo-1611309424-width308-quality80.jpeg"
+          alt="peli5"
+          class="featured__image"
+        />
+      </section>
+      <section class="movie-carousel-mobile">
+        <div class="swiper swipper--featured">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./images/films-horizontal/cenicienta-y-cuatro-caballeros-1623827347-width308-quality80.jpeg"
+                alt="peli1"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/films-horizontal/el-armario-de-1614177682-width308-quality80.jpeg"
+                alt="peli2"
+                class="featured__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/films-horizontal/royals-1620307742-width308-quality80.jpeg"
+                alt="peli3"
+                class="featured__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/films-horizontal/molang-1611309421-width308-quality80.jpeg"
+                alt="peli4"
+                class="featured__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./images/films-horizontal/te-recuerdo-1611309424-width308-quality80.jpeg"
+                alt="peli5"
+                class="featured__image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">
+            GRATIS - La mejor selección de películas
+          </h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/a-todo-tren-destino-asturias-1631015011-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/air-bud-super-estrella-1611323720-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/air-buddies-1611323724-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/alien-attack-1621839755-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/amanece-en-edimburgo-1611321561-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/american-psycho-2-1611475464-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/andy-irons-kissed-by-god-1611473944-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/animal-1631628666-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/ases-y-ochos-1631634034-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/asesinos-internacionales-1611322777-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/asier-y-yo-1611323472-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/august-rush-el-triunfo-de-un-sueno-1611320885-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bear-island-1631715222-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bendita-locura-1611323174-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/blue-valentine-1620031518-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bobby-z-1611322156-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/buffalo-66-1611476862-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bug-1611323867-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bugarach-1611323076-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bunuel-y-la-mesa-del-rey-salomon-1611320122-width217-quality80.jpeg"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">
+            CINEMA - Las películas del momento
+          </h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-amor-por-tu-ciudad-lejos-de-casa-episodio-1-1620740174-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-desarraigo-episodio-3-1620740473-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-el-amor-verdadero-episodio-6-1621349245-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-evaluacion-de-los-debutantes-episodio-7-1621350206-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-futbol-y-redes-sociales-episodio-08-1624006729-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-hora-de-decir-adios-episodio-09-1624006760-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-memoria-historica-episodio-5-1621348197-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-mentalidad-episodio-2-1620740314-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-revision-de-la-temporada-episodio-10-1624006801-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/bvb-09-stories-who-we-are-sed-de-exito-episodio-4-1620740820-width217-quality80.png"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/cabalgata-de-amor-1611324054-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/cabin-fever-1611322739-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/cambio-mortal-1611323792-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/candyman-3-el-dia-de-los-muertos-1611324068-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/caza-terrorista-1620288938-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/chestnut-el-hero-de-central-park-1611323724-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/chuecatown-1611319595-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/codigo-46-1611323780-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/communion-1611322695-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/con-el-amor-no-hay-quien-pueda-1611321517-width217-quality80.jpeg"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">GRATIS - Rakuten Stories</h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/copito-de-nieve-1611321203-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/corumbiara-1611323662-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/cruella-1629818141-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/cube-2-hypercube-1611323802-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/darkness-1611319599-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/de-vuelta-a-casa-1611476687-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/dead-rising-watchtower-1631105702-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/deseos-cumplidos-a-wish-come-true-1611323816-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/despierta-la-furia-1626193604-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/diario-de-una-ninfomana-1611319599-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/don-t-blink-1623057143-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/donkey-xote-1611319600-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/drugstore-cowboy-1611322696-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-amor-menos-pensado-1611323123-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-club-de-los-jovenes-multimillonarios-1620031128-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-doctor-de-la-felicidad-1611322935-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-duque-1611323731-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-efecto-lazaro-1611323868-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-escuadron-suicida-1629366618-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-fiel-1611476735-width217-quality80.jpeg"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">GRATIS - Películas de Acción</h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-forastero-the-outsider-1619167980-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-otro-guardaespaldas-2-1632322950-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-perfume-historia-de-un-asesino-1611319612-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-peso-de-la-manta-1611323473-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-principe-y-yo-3-la-luna-de-miel-1611320162-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-secreto-de-una-obsesion-1611322302-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-ultimo-disparo-1611322634-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/el-ultimo-rey-1611322489-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/en-aguas-tranquilas-1611323828-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/en-el-centro-de-la-tormenta-1611319959-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/en-el-limite-del-amor-1611320749-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/enter-the-dangerous-mind-1623746278-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/expediente-warren-3-obligado-por-el-demonio-1629877926-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/fragiles-1611320058-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/franklyn-1623926436-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/freddie-mercury-the-king-of-queen-1611473948-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/gigantes-el-yokozuna-extranjero-episodio-2-1626709336-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/gigantes-los-dioses-episodio-3-1626709377-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/gigantes-nuevo-en-la-ciudad-episodio-1-1626709073-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/goon-1611323762-width217-quality80.jpeg"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">GRATIS - Películas de Comedia</h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/hoanib-los-secretos-de-los-elefantes-del-desierto-1627460005-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/inestable-1632139416-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/invencibles-1631786900-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/jimmy-s-hall-1611321781-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/judas-kiss-1623854919-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/jungle-cruise-1633425436-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/kill-speed-1631699670-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/kinsey-1611319607-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/la-deuda-1620031107-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/la-fuerza-de-la-sangre-1631722088-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/la-leyenda-de-redbad-1611323092-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/la-monja-2005-1611319612-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/la-navidad-de-una-adicta-a-los-zapatos-1611323848-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/leprechaun-1611324066-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/locos-por-el-sexo-1611321514-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/los-cachorros-de-buddy-1611323723-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/los-idus-de-marzo-1620380290-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/los-recuerdos-1611322323-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/luchando-por-un-sueno-1611323220-width217-quality80.jpeg"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="film cover"
+                src="./images/films/lunas-de-hiel-1611323598-width217-quality80.jpeg"
+              />
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="movie-carousel">
+        <div class="movie-carousel__text">
+          <h2 class="movie-carousel__title">Géneros</h2>
+          <p class="movie-carousel__see-more">VER TODO ></p>
+        </div>
+
+        <div class="swiper swiper--genres">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/action-1591342700.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/adventure-1591342698.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/all-cb781ac8669959b586ff362be895a182d31a7f5865c80b3a2870da8d1d338a09.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/animation-1591342706.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/classic-movies-1591342722.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/comedy-1591342725.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/disney-1591342735.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/docs-specials-1591342738.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/drama-1591342739.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/fantasy-1591342745.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/horror-1591342755.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/indie-1591342703.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/kids-family-1591342710.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/romantic-comedy-1591342729.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/romantic-drama-1591342741.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/science-fiction-1591342715.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img
+                alt="genre"
+                src="./images/genres/spanish-cinema-1591342719.png"
+              />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/thriller-1591342757.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/war-1591342712.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+            <div class="swiper-slide">
+              <img alt="genre" src="./images/genres/western-1591342759.png" />
+              <h3 class="swiper-slide__title">Genre</h3>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__main">
+        <h2 class="footer__title">Rakuten TV - Tu cine en casa</h2>
+        <p class="footer__subtitle">
+          Rakuten TV proporciona una serie de servicios que ofrecen todo un
+          universo de contenidos en solo unos clics. Disfruta de una verdadera
+          experiencia cinematográfica con los últimos estrenos, servicios de
+          suscripción premium y una serie de canales temáticos gratis, como
+          Movies, Euronews, Kids TV, Viki, Documentaries y Rakuten Stories, un
+          canal que incorpora el contenido original y exclusivo de Rakuten TV.
+        </p>
+        <div class="footer__links">
+          <div class="footer__link-container">
+            <img
+              src="./images/others/howitworks-555729f452.svg"
+              alt="How it works"
+              class="footer__link-image"
+            />
+            <h2 class="footer__link-title">Cómo funciona</h2>
+            <p class="footer__link-text">
+              Rakuten TV es compatible con la gran mayoría de dispositivos
+              conectados.
+            </p>
+          </div>
+          <div class="footer__link-container">
+            <img
+              src="./images/others/payments-ec797a77da.svg"
+              alt="Payment methods"
+              class="footer__link-image"
+            />
+            <h2 class="footer__link-title">Más formas de pago</h2>
+            <p class="footer__link-text">
+              Rakuten TV es compatible con PayPal y con tarjetas de crédito Visa
+              y Mastercard.
+            </p>
+          </div>
+          <div class="footer__link-container">
+            <img
+              src="./images/others/support-cd17a5040b.svg"
+              alt="Ayuda y soporte"
+              class="footer__link-image"
+            />
+            <h2 class="footer__link-title">Ayuda y soporte</h2>
+            <p class="footer__link-text">
+              ¿Tienes problemas con nuestro servicio? Ponte en contacto con
+              nuestro equipo de soporte.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__secondary">
+        <img
+          src="./images/others/rktv-grey-eae681a197.svg"
+          alt="Rakuten TV logo"
+          class="footer__secondary-logo"
+        />
+        <ul class="footer__secondary-pages">
+          <li class="footer__secondary-pages-link">Acerca de Rakuten</li>
+          <li class="footer__secondary-pages-link">Quiénes somos</li>
+          <li class="footer__secondary-pages-link">Condiciones de uso</li>
+          <li class="footer__secondary-pages-link">
+            Política de privacidad y cookies
+          </li>
+          <li class="footer__secondary-pages-link">
+            Proceso de autoregulación por edad
+          </li>
+          <li class="footer__secondary-pages-link">Trabaja con nosotros</li>
+        </ul>
+      </div>
+      <address class="footer__secondary-adress">
+        2009 - 2021 © Rakuten TV Europe, S.L.U. - v1.890.0
+      </address>
+    </footer>
+    <section class="mobile-nav">
+      <nav class="mobile-nav__link-container">
+        <div class="mobile-nav__link">
+          <img
+            src="./images/bottom-menu/home.png"
+            alt="Home"
+            class="mobile-nav__link-img"
+          />
+          <p class="mobile-nav__link-text">PORTADA</p>
+        </div>
+        <div class="mobile-nav__link">
+          <img
+            src="./images/bottom-menu/films.png"
+            alt=""
+            class="mobile-nav__link-img"
+          />
+          <p class="mobile-nav__link-text">CINEMA</p>
+        </div>
+        <div class="mobile-nav__link">
+          <img
+            src="./images/bottom-menu/watch.png"
+            alt=""
+            class="mobile-nav__link-img mobile-nav__link-img--eye"
+          />
+          <p class="mobile-nav__link-text">GRATIS</p>
+        </div>
+        <div class="mobile-nav__link">
+          <img
+            src="./images/bottom-menu/ticket.png"
+            alt=""
+            class="mobile-nav__link-img"
+          />
+          <p class="mobile-nav__link-text">SUSCRIPCIONES</p>
+        </div>
+        <div class="mobile-nav__link">
+          <img
+            src="./images/bottom-menu/user.png"
+            alt=""
+            class="mobile-nav__link-img"
+          />
+          <p class="mobile-nav__link-text">ENTRAR</p>
+        </div>
+      </nav>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
