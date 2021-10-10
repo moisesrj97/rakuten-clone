@@ -233,7 +233,6 @@ body {
   align-items: center;
 }
 .swiper-slide img {
-  width: 95%;
   border-radius: 3px;
 }
 .swiper-slide img:hover {
@@ -256,6 +255,10 @@ body {
 }
 .swiper--genres img {
   width: 50%;
+}
+.swiper--genres img:hover {
+  outline: none;
+  outline-offset: -4px;
 }
 
 .swipper--featured {

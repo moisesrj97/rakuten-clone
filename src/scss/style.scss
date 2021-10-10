@@ -189,7 +189,6 @@ body {
     width: 600px;
     @include basics.flexCenter(column);
     & img {
-      width: 95%;
       border-radius: 3px;
       &:hover {
         outline: 4px solid basics.$highlight-color;
@@ -213,6 +212,10 @@ body {
     height: 200px;
     & img {
       width: 50%;
+      &:hover {
+        outline: none;
+        outline-offset: -4px;
+      }
     }
   }
 }
